@@ -1,0 +1,13 @@
+leaflet-container {
+  border-radius: 20px;
+  padding: 50px;
+}
+.popup {
+  font-size: 17px;
+  padding: 10px;
+}
+
+.text-color {
+  color: rgb(0, 130, 174);
+  font-size: 17px;
+}
