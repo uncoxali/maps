@@ -16,28 +16,29 @@ export default function maps({ data }) {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {data?.map((i) => (
+        {data?.map((map) => (
           <Marker
-            key={i?.id}
-            position={[i?.location?.latitude, i?.location?.longitude]}
+            key={map?.id}
+            position={[map?.location?.latitude, map?.location?.longitude]}
           >
             <Tooltip className="leaflet-container" sticky>
               <div className="popup">
                 <div>
-                  Name : <span className="text-color">{i?.name}</span>
+                  Name : <span className="text-color">{map?.name}</span>
                 </div>
                 <hr />
                 <div>
-                  Company : <span className="text-color">{i?.company}</span>
+                  Company : <span className="text-color">{map?.company}</span>
                 </div>
                 <hr />
                 <div>
-                  City : <span className="text-color">{i?.location?.city}</span>
+                  City :{" "}
+                  <span className="text-color">{map?.location?.city}</span>
                 </div>
                 <hr />
                 <div>
                   Country :{" "}
-                  <span className="text-color">{i?.location?.country}</span>
+                  <span className="text-color">{map?.location?.country}</span>
                 </div>
               </div>
             </Tooltip>
